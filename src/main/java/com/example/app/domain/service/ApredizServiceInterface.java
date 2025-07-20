@@ -1,7 +1,7 @@
 package com.example.app.domain.service;
 
-import com.example.app.domain.dto.AprendizAtualizarDTO;
-import com.example.app.domain.dto.AprendizDTO;
+import com.example.app.domain.dto.aprendiz.AprendizAtualizarDTO;
+import com.example.app.domain.dto.aprendiz.AprendizDTO;
 import com.example.app.domain.model.Aprendiz;
 
 import java.util.List;
@@ -10,7 +10,7 @@ public interface ApredizServiceInterface {
 
     void salvarAprediz (AprendizDTO apredizDTO);
 
-    void atualizarAprendiz(AprendizAtualizarDTO atualizarDTO, Long id);
+    void atualizarAprendiz(AprendizAtualizarDTO atualizarDTO, String cpf);
 
     Aprendiz buscarAprendiz(Long id);
 

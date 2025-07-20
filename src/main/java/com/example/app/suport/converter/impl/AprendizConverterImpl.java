@@ -1,8 +1,9 @@
-package com.example.app.domain.service.converter.impl;
+package com.example.app.suport.converter.impl;
 
-import com.example.app.domain.dto.AprendizDTO;
+import com.example.app.domain.dto.aprendiz.AprendizAtualizarDTO;
+import com.example.app.domain.dto.aprendiz.AprendizDTO;
 import com.example.app.domain.model.Aprendiz;
-import com.example.app.domain.service.converter.ApredizConverterinterface;
+import com.example.app.suport.converter.ApredizConverterinterface;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -101,5 +102,30 @@ public class AprendizConverterImpl implements ApredizConverterinterface {
                 .map(this::converterAprendizDTO)
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Aprendiz converterAprendizAtualizar(AprendizAtualizarDTO atualizarDTO, Aprendiz aprendiz) {
+
+        aprendiz.setContatoTelefone(atualizarDTO.getContatoTelefone());
+        aprendiz.setContatoEndereco(atualizarDTO.getContatoEndereco());
+        aprendiz.setConvenioMedico(atualizarDTO.getConvenioMedico());
+        aprendiz.setParticipacaoEdFisica(atualizarDTO.getParticipacaoEdFisica());
+        aprendiz.setDoencasDisturbios(atualizarDTO.getDoencasDisturbios());
+        aprendiz.setQualidadeSono(atualizarDTO.getQualidadeSono());
+        aprendiz.setFrequenciaSono(atualizarDTO.getFrequenciaSono());
+        aprendiz.setQualidadeAlimentacao(atualizarDTO.getQualidadeAlimentacao());
+        aprendiz.setFrequenciaAlimentacao(atualizarDTO.getFrequenciaAlimentacao());
+        aprendiz.setDesenvolvimentoComunicacao(atualizarDTO.getDesenvolvimentoComunicacao());
+        aprendiz.setDesenvolvimentoSocial(atualizarDTO.getDesenvolvimentoSocial());
+        aprendiz.setDesenvolvimentoIntelectual(atualizarDTO.getDesenvolvimentoIntelectual());
+        aprendiz.setDesenvolvimentoMotor(atualizarDTO.getDesenvolvimentoMotor());
+        aprendiz.setLinhaTempoEsportes(atualizarDTO.getLinhaTempoEsportes());
+        aprendiz.setAdaptacoesNecessarias(atualizarDTO.getAdaptacoesNecessarias());
+        aprendiz.setGatilhosComportamentos(atualizarDTO.getGatilhosComportamentos());
+        aprendiz.setEstrategiasManejo(atualizarDTO.getEstrategiasManejo());
+        aprendiz.setObservacoes(atualizarDTO.getObservacoes());
+
+        return aprendiz;
     }
 }
