@@ -5,14 +5,14 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Table(name = "professor", schema = "aba-projeto")
+@Table(name = "supervisor", schema = "aba-projeto")
 @Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Professor {
+public class Supervisor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,5 +28,4 @@ public class Professor {
 
     @Column(name = "matricula", nullable = false, unique = true)
     private String matricula;
-
 }
