@@ -1,4 +1,4 @@
-package com.example.app.domain.service.impl;
+package com.example.app.domain.service.impl.professor;
 
 import com.example.app.domain.dto.professor.ProfessorDTO;
 import com.example.app.domain.model.Professor;
